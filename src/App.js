@@ -13,7 +13,7 @@ function App() {
 
     const Load = () => {
         fetch("/tasks/")
-            .then(j => j.text())
+            .then(json => json.text())
             .then(data => {
                 const tempList = data.split(',');
                 setTasks(tempList);
