@@ -27,7 +27,6 @@ function App() {
 
     const deleteTask = (deed) => {
         const temp = tasks.filter(task => deed !== task);
-        //setTasks(temp);
         const tempToWrite = temp.join(",");
 
         axios.post("/remove", { "tasks": tempToWrite })
